@@ -21,7 +21,7 @@
       </div>
     </header>
     <main>
-      <h1 class="time">00:00</h1>
+      <div id="timer">00:00</div>
       <div class="board-row row-0">
         <div class="board-block" data-index="00"></div>
         <div class="board-block" data-index="01"></div>
@@ -90,7 +90,9 @@
         <div class="keyboard-normal-block" data-key="L">L</div>
       </div>
       <div class="keyboard-row">
-        <div class="keyboard-special-block" data-key="ENTER">ENTER</div>
+        <div class="keyboard-special-block" data-key="ENTER" id="enter-key">
+          ENTER
+        </div>
         <div class="keyboard-normal-block" data-key="Z">Z</div>
         <div class="keyboard-normal-block" data-key="X">X</div>
         <div class="keyboard-normal-block" data-key="C">C</div>
@@ -98,10 +100,15 @@
         <div class="keyboard-normal-block" data-key="B">B</div>
         <div class="keyboard-normal-block" data-key="N">N</div>
         <div class="keyboard-normal-block" data-key="M">M</div>
-        <div class="keyboard-special-block" data-key="BACKSPACE">
+        <div
+          class="keyboard-special-block"
+          data-key="BACKSPACE"
+          id="backspace-key"
+        >
           <img src="assets/backspace.svg" alt="" />
         </div>
       </div>
     </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
