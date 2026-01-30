@@ -68,8 +68,23 @@ function appStart() {
       block.style.color = "white";
     }
 
-    if (맞은_갯수 === 5) gameover();
-    else nextLine();
+    if (맞은_갯수 === 5) {
+      gameover();
+      for (let i = 0; i < 5; i++) {
+        const block = document.querySelector(
+          `.board-block[data-index='${attempts}${i}']`,
+        );
+        block.classList.add("correct-animation");
+      }
+    } else {
+      for (let i = 0; i < 5; i++) {
+        const block = document.querySelector(
+          `.board-block[data-index='${attempts}${i}']`,
+        );
+        block.classList.add("wrong-animation");
+      }
+      nextLine();
+    }
   };
   const startTimer = () => {
     const 시작_시간 = new Date();
